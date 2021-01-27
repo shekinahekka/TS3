@@ -10,11 +10,11 @@ var polygon1, slingShot;
 var score = 0;
 var backgroundImg;
 var gameState = "on slingshot";
-var bg = "Sprites/bg.jpg";
+var bg = "bg.jpg";
 
 function preload() {
   getBackgroundImg();
-  backgroundImg = loadImage("Sprites/bg.jpg");
+  backgroundImg = loadImage("bg.jpg");
 }
 
 function setup() {
@@ -145,9 +145,9 @@ async function getBackgroundImg() {
   var date = responseJSON.datetime;
   var hour = date.slice(11, 13);
   if(hour>=06 && hour<=19){
-      bg = "Sprites/bg.jpg"
+      bg = "bg.jpg"
   } else {
-      bg = "Sprites/bg1.jpg"
+      bg = "bg1.jpg"
   }
   backgroundImg = loadImage(bg);
   console.log(backgroundImg);
